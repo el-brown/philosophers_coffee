@@ -1,8 +1,10 @@
 import React from 'react';
 
 const EditCoffee = (props) => {
-  
-  const { name, notes } = props.coffee
+
+  // {philo: @philo, coffee: @coffee}
+
+  const { philo, coffee } = props
 
   return (
     <div>
@@ -10,8 +12,16 @@ const EditCoffee = (props) => {
         <p>
           <a href="/">Home</a>
         </p>
-      <p>name: {name}</p>
-      <p>quote: {notes}</p>
+
+      <form action={`/philos/${philo.id}/coffees/${coffee.id}`} method="post">
+        <input type="hidden" name="_method" value="patch" />
+        <p>Name</p>
+        <input defaultValue={coffee.name} name="coffee[name]" />
+        <p>Notes</p>
+        <input defaultValue={coffee.notes} name="coffee[notes]" />
+        <button>Add</button>
+      </form>
+
     </div>
   )
 }

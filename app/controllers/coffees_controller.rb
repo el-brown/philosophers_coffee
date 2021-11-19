@@ -46,7 +46,7 @@ class CoffeesController < ApplicationController
   private
 
   def coffee_params
-    param.require(:coffee).permit(:name, :notes)
+    params.require(:coffee).permit(:name, :notes)
   end
 
   def set_philo
