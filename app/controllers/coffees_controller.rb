@@ -19,13 +19,15 @@ class CoffeesController < ApplicationController
     @coffee = @philo.coffees.new(coffee_params)
     if (@coffee.save)
       redirect_to philo_coffees_path(@philo.id)
+    else
+    end
 
   end
 
   # You need the philosopher because you need to know who's coffee is being
   # edited and you need the coffee so you can prefill the form
   def edit
-    render component: "EditItem", props:{philo: @philo, coffee: @coffee}
+    render component: "EditCoffee", props:{philo: @philo, coffee: @coffee}
   end
 
   #show them rails/info/routes to see why it redirects there

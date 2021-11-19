@@ -12,6 +12,8 @@ const Philo = (props) => {
         </p>
       <h2>{id}. {name}</h2>
       <p>"{quote}"</p>
+
+      <a href={`${id}/coffees`}>Coffees</a>
     </div>
   )
 }

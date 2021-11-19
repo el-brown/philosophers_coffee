@@ -42,7 +42,7 @@
   touch app/javascript/components/EditPhilo.js
 
 #8: RUN COMPONENTS
-  Create a very basic functional component with a header 
+  Build out a very basic functional component with a header 
   for each component page and make sure they all work
 
 #9: GET DATA FROM CONTROLLER TO COMPONENT
@@ -63,3 +63,9 @@
   touch app/javascript/components/Coffee.js
   touch app/javascript/components/NewCoffee.js
   touch app/javascript/components/EditCoffee.js
+
+#13: CONNECT PHILO WITH HIS COFFEES - NAVIGATION
+  <a href={`philos/${id}/coffees`}>Coffees</a>
+
+#14: RUN COFFEE COMPONENTS
+  Build out basic components and make sure they all work.
