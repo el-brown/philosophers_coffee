@@ -45,4 +45,21 @@
   Create a very basic functional component with a header 
   for each component page and make sure they all work
 
-#9: 
+#9: GET DATA FROM CONTROLLER TO COMPONENT
+  Pull data off props: 
+  Philos.js - map through the philos data
+  Philo.js - show that philos data
+  EditPhilo.js - prefill the form with that philo's data
+  
+#10: NAVIGATION
+  Add links to navigate through pages.
+  
+#11: FILL OUT HAS_MANY CONTROLLER - COFFEES
+  Remember that you need a set_philo because you must have the 
+  info for that specific philosopher to CRUD his coffees
+
+#12: CREATE COFFEE COMPONENTS
+  touch app/javascript/components/Coffees.js
+  touch app/javascript/components/Coffee.js
+  touch app/javascript/components/NewCoffee.js
+  touch app/javascript/components/EditCoffee.js

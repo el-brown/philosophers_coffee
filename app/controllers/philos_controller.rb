@@ -31,7 +31,7 @@ class PhilosController < ApplicationController
   def create
     @philo = Philo.new(philo_params)
     if(@philo.save)
-      redirect_to "Philos"
+      redirect_to root_path
     end
   end
 
@@ -44,7 +44,7 @@ class PhilosController < ApplicationController
   #if the trainer successfully updates, redirect to a page
   def update
     if @philo.update(philo_params)
-      redirect_to "Philo"
+      redirect_to root_path
     else
     end
   end
@@ -52,7 +52,7 @@ class PhilosController < ApplicationController
   #we don't want to render a page for this, we just want an action
   def destroy
     @philo.destroy
-    redirect_to "Philos"
+    redirect_to root_path
   end
 
   private
