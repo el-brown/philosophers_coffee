@@ -71,4 +71,5 @@
   Build out basic components and make sure they all work.
 
 #15: COFFEE FORMS
-  
+  Need to include philo from props because you gotta
+  know who's coffee you're CRUD-ing on.
