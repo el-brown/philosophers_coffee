@@ -13,7 +13,7 @@ const EditCoffee = (props) => {
           <a href="/">Home</a>
         </p>
 
-      <form action={`/philos/${philo.id}/coffees/${coffee.id}`} method="post">
+      <form action={`/philos/${coffee.philo_id}/coffees/${coffee.id}`} method="post">
         <input type="hidden" name="_method" value="patch" />
         <p>Name</p>
         <input defaultValue={coffee.name} name="coffee[name]" />

@@ -10,7 +10,7 @@
 
 #2: MODELS
   $ rails g model philo name:string quote:string 
-  $ rails g model coffee name notes philos:belongs_to
+  $ rails g model coffee name notes philo:belongs_to
 
 #3: CONTROLLERS
   $ rails g controller philos index show new create edit update destroy
@@ -46,9 +46,11 @@
   for each component page and make sure they all work
 
 #9: GET DATA FROM CONTROLLER TO COMPONENT
-  Pull data off props: 
+  Pull data off props for each component: 
+    const { philos } = props etc.
+
   Philos.js - map through the philos data
-  Philo.js - show that philos data
+  Philo.js - show that philo's data
   EditPhilo.js - prefill the form with that philo's data
   
 #10: NAVIGATION
@@ -71,5 +73,7 @@
   Build out basic components and make sure they all work.
 
 #15: COFFEE FORMS
-  Need to include philo from props because you gotta
-  know who's coffee you're CRUD-ing on.
+  You can include philos in props to use philos.id
+  for the post method. Alternatively you can just use
+  coffee.philo_id since the has_many relationship requires
+  coffee to include a philo_id.
